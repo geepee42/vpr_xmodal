@@ -1,0 +1,27 @@
+[workspace]
+name = "vpr_xmodal"
+description = "Segment-level vision-language grounding for visual place recognition"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[system-requirements]
+cuda = "12"
+
+[dependencies]
+python = "3.11.*"
+faiss-gpu = "*"
+numpy = "*"
+pandas = "*"
+scipy = "*"
+pillow = "*"
+tqdm = "*"
+
+[pypi-dependencies]
+torch = "==2.5.1"
+torchvision = "==0.20.1"
+transformers = "==4.55.4"
+accelerate = ">=1.10.1"
+pytorch-metric-learning = "==2.9.0"
+timm = "*"
+mobile-sam = { git = "https://github.com/ChaoningZhang/MobileSAM.git", rev = "34bbbfdface3c18e5221aa7de6032d7220c6c6a1" }
+dam = { git = "https://github.com/geepee42/describe-anything.git" }
